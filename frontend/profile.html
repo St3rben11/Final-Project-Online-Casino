@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile | RoyalChain</title>
+
+<link rel="stylesheet" href="./css/style.css">
+<link rel="icon" href="data:,">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="nav-center">
+
+    <div class="logo">RoyalChain</div>
+
+    <div class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./games.html">Games</a>
+      <a href="./profile.html">Profile</a>
+    </div>
+
+    <div class="wallet-ui">
+      <span id="royalBalanceNav">ROYAL: 0</span>
+      <button class="btn" id="connectBtn">Connect</button>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- ================= PROFILE ================= -->
+<section class="grid" style="margin-top:60px;">
+
+  <!-- WALLET -->
+  <div class="card">
+    <h3>Wallet</h3>
+    <p id="walletAddress">Not connected</p>
+  </div>
+
+  <!-- ETH -->
+  <div class="card">
+    <h3>ETH Balance</h3>
+    <p id="ethBalance">0 ETH</p>
+  </div>
+
+  <!-- ROYAL -->
+  <div class="card">
+    <h3>ROYAL Balance</h3>
+    <p id="royalBalance">ROYAL: 0</p>
+  </div>
+
+</section>
+
+
+<!-- ================= HISTORY ================= -->
+<section class="grid">
+
+  <div class="card" style="grid-column:1/-1;">
+    <h3>Game History</h3>
+
+    <div id="history" style="
+      margin-top:15px;
+      color:#aaa;
+      font-size:14px;
+      line-height:1.6;
+    ">
+      No games yet
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+    <div class="footer-col brand">
+      <h2>LUCKY SPIN</h2>
+      <p>Provably fair casino games. Play responsibly.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Games</h3>
+      <ul>
+        <li><a href="./roulette.html">Roulette</a></li>
+        <li><a href="./coinflip.html">Coin Flip</a></li>
+        <li><a href="#">Coming Soon</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Social</h3>
+      <div class="socials">
+        <a href="#">Discord</a>
+        <a href="#">Telegram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Lucky Spin. All rights reserved.
+  </div>
+
+</footer>
+
+
+<!-- ================= SCRIPTS ================= -->
+<script type="module" src="./js/profile.js"></script>
+<script type="module" src="./js/navWallet.js"></script>
+</body>
+</html>

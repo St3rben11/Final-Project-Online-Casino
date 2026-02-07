@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RoyalChain Casino</title>
+
+<link rel="stylesheet" href="./css/style.css">
+<link rel="icon" href="data:,">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="nav-center">
+
+    <div class="logo">RoyalChain</div>
+
+    <div class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./games.html">Games</a>
+      <a href="./profile.html">Profile</a>
+    </div>
+
+    <div class="wallet-ui">
+      <span id="royalBalanceNav">ROYAL: 0</span>
+      <button class="btn" id="connectBtn">Connect</button>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+
+  <h1>RoyalChain Casino</h1>
+  <p>Play. Win. Dominate the Blockchain.</p>
+
+  <button class="btn" type="button" onclick="location.href='games.html'">
+    Enter Casino
+  </button>
+
+  <!-- BALANCE -->
+  <div id="balanceSection" style="margin-top:25px;">
+  <p id="ethBalance">ETH: 0</p>
+  <p id="royalBalance">ROYAL: 0</p>
+</div>
+
+  <!-- BUY -->
+  <div style="max-width:400px;margin:20px auto;">
+    <input id="buyAmount" placeholder="ETH amount" />
+    <button class="btn" id="buyBtn" type="button" style="margin-top:10px;">
+      Buy ROYAL
+    </button>
+  </div>
+
+
+</section>
+
+
+<!-- ================= GAMES ================= -->
+<section class="grid">
+
+  <div class="card">
+    <h3>🪙 Coin Flip</h3>
+    <p>Heads or Tails</p>
+    <button class="btn" type="button"
+      onclick="location.href='games.html#coinflip'">
+      Play
+    </button>
+  </div>
+
+  <div class="card">
+    <h3>🎡 European Roulette</h3>
+    <p>0 – 36</p>
+    <button class="btn" type="button"
+      onclick="location.href='games.html#roulette'">
+      Play
+    </button>
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+    <div class="footer-col brand">
+      <h2>LUCKY SPIN</h2>
+      <p>Provably fair casino games. Play responsibly.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Games</h3>
+      <ul>
+        <li><a href="./roulette.html">Roulette</a></li>
+        <li><a href="./coinflip.html">Coin Flip</a></li>
+        <li><a href="#">Coming Soon</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Social</h3>
+      <div class="socials">
+        <a href="#">Discord</a>
+        <a href="#">Telegram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Lucky Spin. All rights reserved.
+  </div>
+
+</footer>
+
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/ethers@6/dist/ethers.umd.min.js"></script>
+<script type="module" src="js/app.js"></script>
+<script type="module" src="./js/navWallet.js"></script>
+</body>
+</html>

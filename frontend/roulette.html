@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RoyalChain • European Roulette</title>
+
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/roulette.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-center">
+
+    <div class="logo">RoyalChain</div>
+
+    <div class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./games.html">Games</a>
+      <a href="./profile.html">Profile</a>
+    </div>
+
+    <div class="wallet-ui">
+      <span id="royalBalanceNav">ROYAL: 0</span>
+      <button class="btn" id="connectBtn">Connect</button>
+    </div>
+
+  </div>
+</header>
+
+<main class="page">
+
+<section class="card roulette-card">
+
+<h1 class="title">European Roulette</h1>
+
+<!-- ROULETTE -->
+<div class="roulette-wrapper">
+  <div class="roulette">
+    <div class="wheel" id="wheel">
+      <div id="numbers"></div>
+    </div>
+    <div class="pointer"></div>
+  </div>
+</div>
+
+<!-- CONTROLS -->
+<div class="controls">
+
+<!-- BET TYPE -->
+<div class="control-group">
+<label>Bet Type</label>
+
+<div class="bet-types">
+<button id="bet-number" onclick="selectType('number')">Number</button>
+<button id="bet-red" onclick="selectType('red')">Red</button>
+<button id="bet-black" onclick="selectType('black')">Black</button>
+<button id="bet-even" onclick="selectType('even')">Even</button>
+<button id="bet-odd" onclick="selectType('odd')">Odd</button>
+</div>
+
+</div>
+
+<!-- NUMBER INPUT -->
+<div class="control-group">
+<label>Number (0–36)</label>
+<input id="value" type="number" min="0" max="36" placeholder="17">
+</div>
+
+<!-- BET INPUT -->
+<div class="control-group">
+<label>Bet (ROYAL)</label>
+<input id="betAmount" type="number" min="1" placeholder="10">
+</div>
+
+<!-- SPIN BUTTON -->
+<button class="spin-btn" onclick="spin()">SPIN</button>
+
+</div>
+
+<!-- RESULT -->
+<div id="result" class="result">
+Waiting for spin...
+</div>
+
+</section>
+</main>
+
+<!-- HISTORY -->
+<div class="history-float">
+<h3>History</h3>
+<div id="rouletteHistory">No games yet</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+<div class="footer-container">
+
+<div class="footer-col brand">
+<h2>LUCKY SPIN</h2>
+<p>Provably fair casino games. Play responsibly.</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 RoyalChain
+</div>
+</footer>
+
+<!-- SCRIPTS -->
+<script type="module" src="./js/roulette.js"></script>
+<script type="module" src="./js/navWallet.js"></script>
+
+</body>
+</html>

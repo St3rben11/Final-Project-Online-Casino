@@ -1,0 +1,281 @@
+:root{
+  --wheel-size: 380px;
+  --gold: #d4af37;
+  --gold-glow: #ffd700;
+  --bg-dark: #0a0814;
+  --card: #141022;
+  --red: #8f1d2c;
+  --black: #111;
+  --green: #0f7a4d;
+}
+
+/* ================= WRAPPER ================= */
+
+.roulette-wrapper{
+  display:flex;
+  justify-content:center;
+  margin:50px 0;
+}
+
+.roulette{
+  position:relative;
+  width:var(--wheel-size);
+  height:var(--wheel-size);
+}
+
+/* ================= WHEEL ================= */
+
+.wheel{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  position:relative;
+
+  background:
+    conic-gradient(
+      var(--green) 0deg 9.73deg,
+      var(--red) 9.73deg 19.46deg,
+      var(--black) 19.46deg 29.19deg,
+      var(--red) 29.19deg 38.92deg,
+      var(--black) 38.92deg 48.65deg,
+      var(--red) 48.65deg 58.38deg,
+      var(--black) 58.38deg 68.11deg,
+      var(--red) 68.11deg 77.84deg,
+      var(--black) 77.84deg 87.57deg,
+      var(--red) 87.57deg 97.3deg,
+      var(--black) 97.3deg 107.03deg,
+      var(--red) 107.03deg 116.76deg,
+      var(--black) 116.76deg 126.49deg,
+      var(--red) 126.49deg 136.22deg,
+      var(--black) 136.22deg 145.95deg,
+      var(--red) 145.95deg 155.68deg,
+      var(--black) 155.68deg 165.41deg,
+      var(--red) 165.41deg 175.14deg,
+      var(--black) 175.14deg 184.87deg,
+      var(--red) 184.87deg 194.6deg,
+      var(--black) 194.6deg 204.33deg,
+      var(--red) 204.33deg 214.06deg,
+      var(--black) 214.06deg 223.79deg,
+      var(--red) 223.79deg 233.52deg,
+      var(--black) 233.52deg 243.25deg,
+      var(--red) 243.25deg 252.98deg,
+      var(--black) 252.98deg 262.71deg,
+      var(--red) 262.71deg 272.44deg,
+      var(--black) 272.44deg 282.17deg,
+      var(--red) 282.17deg 291.9deg,
+      var(--black) 291.9deg 301.63deg,
+      var(--red) 301.63deg 311.36deg,
+      var(--black) 311.36deg 321.09deg,
+      var(--red) 321.09deg 330.82deg,
+      var(--black) 330.82deg 340.55deg,
+      var(--red) 340.55deg 350.28deg,
+      var(--black) 350.28deg 360deg
+    );
+
+  border:16px solid var(--gold);
+
+  box-shadow:
+    inset 0 0 60px #000,
+    0 0 40px #00000088,
+    0 0 20px var(--gold-glow);
+
+  transition:transform 5s cubic-bezier(.17,.67,.83,.67);
+  overflow:hidden;
+}
+
+/* ================= GLASS EFFECT ================= */
+
+.wheel::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background:linear-gradient(120deg, #ffffff20, transparent 40%);
+}
+
+/* ================= CENTER ================= */
+
+.wheel::after{
+  content:"";
+  position:absolute;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:var(--gold);
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  box-shadow:
+    0 0 10px #000,
+    0 0 20px var(--gold-glow);
+}
+
+/* ================= POINTER ================= */
+
+.pointer{
+  position:absolute;
+  top:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  width:0;
+  height:0;
+  border-left:16px solid transparent;
+  border-right:16px solid transparent;
+  border-bottom:28px solid var(--gold);
+
+  filter: drop-shadow(0 0 6px var(--gold-glow));
+}
+
+/* ================= NUMBERS ================= */
+
+#numbers{
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+}
+
+.number {
+  position:absolute;
+  font-size:17px;
+  font-weight:700;
+  color:white;
+  text-shadow:0 0 8px black;
+  white-space:nowrap;
+}
+
+/* ================= BET BUTTONS ================= */
+
+.bet-types{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  justify-content:center;
+  margin-top:8px;
+}
+
+.bet-types button{
+  padding:8px 14px;
+  border-radius:10px;
+  border:1px solid var(--gold);
+  background:#1a1428;
+  color:white;
+  cursor:pointer;
+  transition:all .2s ease;
+}
+
+.bet-types button:hover{
+  background:var(--gold);
+  color:black;
+  box-shadow:0 0 12px var(--gold-glow);
+}
+
+.bet-types button.active{
+  background:var(--gold);
+  color:black;
+  box-shadow:0 0 18px var(--gold-glow);
+}
+
+/* ================= RESULT ================= */
+
+.result{
+  margin-top:20px;
+  font-size:20px;
+  font-weight:600;
+  text-align:center;
+  color:var(--gold);
+  text-shadow:0 0 10px #000;
+}
+
+/* ================= HISTORY CARD ================= */
+
+.history-card{
+  margin-top:40px;
+  padding:24px;
+  background:var(--card);
+  border-radius:18px;
+  box-shadow:
+    0 0 20px #00000088,
+    inset 0 0 20px #00000055;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.history-card h2{
+  text-align:center;
+  margin-bottom:16px;
+  color:var(--gold);
+  text-shadow:0 0 10px #000;
+}
+
+/* ================= HISTORY LIST ================= */
+
+.history-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+/* ЭЛЕМЕНТ ИСТОРИИ */
+.history-list li{
+  background:#1b152c;
+  border:1px solid #2a2042;
+  border-radius:12px;
+  padding:10px 14px;
+  font-size:15px;
+  color:#ddd;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:inset 0 0 10px #00000066;
+  transition:.2s ease;
+}
+
+.history-list li:hover{
+  transform:translateY(-1px);
+  box-shadow:0 0 12px #000000aa;
+}
+
+/* ================= WIN / LOSE COLORS ================= */
+
+.history-win{
+  color:#2eea7f;
+  text-shadow:0 0 6px #2eea7f66;
+}
+
+.history-lose{
+  color:#ff4c5c;
+  text-shadow:0 0 6px #ff4c5c66;
+}
+
+
+/* ================= FLOAT HISTORY ================= */
+
+.history-float{
+  position:fixed;
+  right:40px;
+  top:50%;
+  transform:translateY(-50%);
+  background:#140f26;
+  padding:18px 22px;
+  border-radius:16px;
+  min-width:180px;
+  box-shadow:0 0 30px #00000088;
+  text-align:center;
+}
+
+.history-float h3{
+  margin-bottom:8px;
+  color:#fff;
+}
+
+#rouletteHistory{
+  color:#d4af37;
+  font-weight:600;
+  font-size:14px;
+}

@@ -1,0 +1,246 @@
+.coinflip-section{
+  text-align:center;
+  padding:80px 0;
+  color:white;
+}
+
+.coin-title{
+  font-size:38px;
+  letter-spacing:1px;
+  margin-bottom:30px;
+}
+
+.coin-stage{
+  perspective:1200px;
+  margin:40px auto;
+  width:260px;
+  height:260px;
+}
+
+.coin{
+  width:100%;
+  height:100%;
+  position:relative;
+  transform-style:preserve-3d;
+  transition:transform 3s cubic-bezier(.17,.67,.25,1);
+}
+
+.coin-face{
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:64px;
+  font-weight:800;
+  backface-visibility:hidden;
+
+  border:8px solid #d4af37;
+
+  box-shadow:
+    inset 0 0 40px #000,
+    0 0 30px rgba(0,0,0,0.6);
+}
+
+/* HEADS */
+.coin-face.heads{
+  background:
+    radial-gradient(circle at 30% 30%, #fff3b0, #d4af37 60%, #9e7c1f);
+  color:#3a2a00;
+}
+
+/* TAILS */
+.coin-face.tails{
+  background:
+    radial-gradient(circle at 30% 30%, #e6e6e6, #9a9a9a 60%, #4d4d4d);
+  color:#111;
+  transform:rotateY(180deg);
+}
+
+/* RESULT TEXT */
+.coin-result{
+  font-size:24px;
+  margin-top:25px;
+  min-height:30px;
+}
+
+/* GOLD BUTTON */
+.btn-gold{
+  padding:14px 28px;
+  border-radius:14px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+  margin:10px;
+  background:linear-gradient(145deg,#f5d77a,#c9a227);
+  box-shadow:0 4px 14px rgba(0,0,0,0.6), inset 0 1px 0 #fff3b0;
+  transition:0.2s;
+}
+
+.btn-gold:hover{
+  transform:translateY(-2px) scale(1.05);
+  box-shadow:0 6px 20px rgba(0,0,0,0.8), 0 0 12px rgba(212,175,55,0.5);
+}
+
+.coinflip-page{
+  color:white;
+  padding:60px;
+  text-align:center;
+}
+
+.coin-layout{
+  display:flex;
+  justify-content:center;
+  gap:60px;
+  align-items:center;
+}
+
+.bet-panel, .history{
+  width:220px;
+  background:#141022;
+  padding:20px;
+  border-radius:16px;
+  box-shadow:0 0 30px #000;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  margin-bottom:10px;
+}
+
+.quick-bets button,
+.choice button{
+  margin:4px;
+  padding:8px 12px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.flip-btn{
+  margin-top:12px;
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:none;
+  font-weight:700;
+  background:linear-gradient(145deg,#f5d77a,#c9a227);
+}
+
+/* COIN */
+.coin-stage{
+  perspective:1200px;
+  width:220px;
+  height:220px;
+}
+
+.coin{
+  width:100%;
+  height:100%;
+  position:relative;
+  transform-style:preserve-3d;
+  transition:transform 3s;
+}
+
+.coin-face{
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:60px;
+  font-weight:800;
+  backface-visibility:hidden;
+  border:6px solid gold;
+}
+
+.heads{ background:gold; color:black; }
+.tails{ background:silver; color:black; transform:rotateY(180deg); }
+
+.result{
+  margin-top:30px;
+  font-size:24px;
+}
+
+.history ul{
+  list-style:none;
+  padding:0;
+}
+
+/* ===== GOLD BUTTON ===== */
+
+.btn-casino{
+  position: relative;
+  padding: 14px 22px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #2a1d00;
+
+  background: linear-gradient(
+    145deg,
+    #ffe08a,
+    #cfa72e
+  );
+
+  box-shadow:
+    0 4px 14px rgba(0,0,0,0.6),
+    inset 0 1px 0 #fff6c5;
+
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+/* верхний блеск */
+.btn-casino::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.35),
+    transparent 40%
+  );
+  opacity:0.7;
+  pointer-events:none;
+}
+
+/* HOVER */
+.btn-casino:hover{
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.8),
+    0 0 16px rgba(212,175,55,0.6),
+    inset 0 1px 0 #fff8d6;
+}
+
+/* ACTIVE (нажатие) */
+.btn-casino:active{
+  transform: translateY(1px) scale(0.97);
+  box-shadow:
+    inset 0 4px 10px rgba(0,0,0,0.7);
+}
+
+/* SELECTED STATE */
+.btn-casino.active{
+  box-shadow:
+    0 0 18px rgba(255,215,0,0.8),
+    inset 0 2px 6px rgba(0,0,0,0.6);
+  transform: scale(1.05);
+}
+
+/* QUICK BETS */
+.quick-bets .btn-casino{
+  padding:10px 14px;
+  font-size:14px;
+}

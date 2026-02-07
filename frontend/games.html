@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Games</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-center">
+
+    <div class="logo">RoyalChain</div>
+
+    <div class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./games.html">Games</a>
+      <a href="./profile.html">Profile</a>
+    </div>
+
+    <div class="wallet-ui">
+      <span id="royalBalanceNav">ROYAL: 0</span>
+      <button class="btn" id="connectBtn">Connect</button>
+    </div>
+
+  </div>
+</header>
+
+<section class="grid">
+
+  <div class="card game-card" onclick="location.href='coinflip.html'">
+    <h3>🪙 Coin Flip</h3>
+    <p>Heads or Tails</p>
+    <button class="btn">Play</button>
+  </div>
+
+  <div class="card game-card" onclick="location.href='roulette.html'">
+    <h3>🎡 Roulette</h3>
+    <p>European 0-36</p>
+    <button class="btn">Play</button>
+  </div>
+
+</section>
+
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+    <div class="footer-col brand">
+      <h2>LUCKY SPIN</h2>
+      <p>Provably fair casino games. Play responsibly.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Games</h3>
+      <ul>
+        <li><a href="#">Roulette</a></li>
+        <li><a href="#">Coin Flip</a></li>
+        <li><a href="#">Coming Soon</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Social</h3>
+      <div class="socials">
+        <a href="#">Discord</a>
+        <a href="#">Telegram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Lucky Spin. All rights reserved.
+  </div>
+
+</footer>
+
+<!-- ГЛАВНОЕ: ПОДКЛЮЧЕНИЕ JS -->
+<script type="module" src="./js/app.js"></script>
+<script type="module" src="./js/navWallet.js"></script>
+
+</body>
+</html>

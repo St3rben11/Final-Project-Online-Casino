@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Coin Flip</title>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/coinflip.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-center">
+
+    <div class="logo">RoyalChain</div>
+
+    <div class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./games.html">Games</a>
+      <a href="./profile.html">Profile</a>
+    </div>
+
+    <div class="wallet-ui">
+      <span id="royalBalanceNav">ROYAL: 0</span>
+      <button class="btn" id="connectBtn">Connect</button>
+    </div>
+
+  </div>
+</header>
+
+<section class="coinflip-page">
+
+  <h1>Coin Flip</h1>
+
+  <div class="top-bar">
+    <div id="royalBalance">ROYAL: 0</div>
+  </div>
+
+  <div class="coin-layout">
+
+    <!-- LEFT PANEL -->
+    <div class="bet-panel">
+
+      <h3>Your Bet</h3>
+
+      <input id="betAmount" type="number" value="50" min="1" />
+
+      <div class="quick-bets">
+        <button class="btn-casino" onclick="addBet(10)">+10</button>
+        <button class="btn-casino" onclick="addBet(50)">+50</button>
+        <button class="btn-casino" onclick="addBet(100)">+100</button>
+      </div>
+
+      <div class="choice">
+        <button class="btn-casino" id="btnHeads" onclick="selectSide('heads')">HEADS</button>
+        <button class="btn-casino" id="btnTails" onclick="selectSide('tails')">TAILS</button>
+      </div>
+
+      <button class="btn-casino flip-btn" onclick="flipCoin()">FLIP</button>
+
+    </div>
+
+    <!-- CENTER -->
+    <div class="coin-stage">
+      <div id="coin" class="coin">
+        <div class="coin-face heads">H</div>
+        <div class="coin-face tails">T</div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="history">
+      <h3>History</h3>
+      <ul id="historyList"></ul>
+    </div>
+
+  </div>
+
+  <div id="resultText" class="result"></div>
+
+</section>
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    © 2026 Lucky Spin. All rights reserved.
+  </div>
+</footer>
+
+<!-- ВАЖНО: APP СИСТЕМА -->
+<script type="module" src="./js/app.js"></script>
+
+<!-- ИГРА -->
+<script type="module" src="./js/coinflip.js"></script>
+<script type="module" src="./js/navWallet.js"></script>
+
+</body>
+</html>
